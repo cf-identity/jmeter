@@ -6,7 +6,7 @@ We currently have four different kinds of tests added
 * client_credentials - simple client_credentials grant type
 * password - simple password grant type
 * login and authorize - login and authorize then logout
-* login then repeat authorize - login once, then oauth/authorize with session
+* login then repeat authorize - login once, then repeat oauth/authorize with the authenticated session
 
 # setup
 This repository has everything, with the exception for Java VM,  you need to run Apache Jmeter
