@@ -11,7 +11,7 @@ We currently have four different kinds of tests added
 # setup
 This repository has everything, with the exception for Java VM,  you need to run Apache Jmeter
 We use `.envrc` to automatically configure your path. 
-If you do not use [direnv](https://github.com/direnv/direnv) you have to run the command
+If you do not use [direnv](https://github.com/direnv/direnv) you have to run a bash shell and run the command
 
     source .envrc
     
