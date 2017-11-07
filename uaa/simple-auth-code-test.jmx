@@ -12,16 +12,42 @@
     </TestPlan>
     <hashTree>
       <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-        <collectionProp name="Arguments.arguments"/>
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="net.protocol" elementType="Argument">
+            <stringProp name="Argument.name">net.protocol</stringProp>
+            <stringProp name="Argument.value">http</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="net.host" elementType="Argument">
+            <stringProp name="Argument.name">net.host</stringProp>
+            <stringProp name="Argument.value">localhost</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="net.port" elementType="Argument">
+            <stringProp name="Argument.name">net.port</stringProp>
+            <stringProp name="Argument.value">8080</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="net.uaa.contextpath" elementType="Argument">
+            <stringProp name="Argument.name">net.uaa.contextpath</stringProp>
+            <stringProp name="Argument.value">/uaa/</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="net.app.contextpath" elementType="Argument">
+            <stringProp name="Argument.name">net.app.contextpath</stringProp>
+            <stringProp name="Argument.value">/app/</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
       </Arguments>
       <hashTree/>
       <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
         <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
           <collectionProp name="Arguments.arguments"/>
         </elementProp>
-        <stringProp name="HTTPSampler.domain">localhost</stringProp>
-        <stringProp name="HTTPSampler.port">8080</stringProp>
-        <stringProp name="HTTPSampler.protocol">http</stringProp>
+        <stringProp name="HTTPSampler.domain">${net.host}</stringProp>
+        <stringProp name="HTTPSampler.port">${net.port}</stringProp>
+        <stringProp name="HTTPSampler.protocol">${net.protocol}</stringProp>
         <stringProp name="HTTPSampler.contentEncoding"></stringProp>
         <stringProp name="HTTPSampler.path"></stringProp>
         <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
@@ -33,8 +59,8 @@
         <collectionProp name="CookieManager.cookies">
           <elementProp name="X-Uaa-Csrf" elementType="Cookie" testname="X-Uaa-Csrf">
             <stringProp name="Cookie.value">jmeter</stringProp>
-            <stringProp name="Cookie.domain">localhost</stringProp>
-            <stringProp name="Cookie.path">/uaa</stringProp>
+            <stringProp name="Cookie.domain">${net.host}</stringProp>
+            <stringProp name="Cookie.path">${net.uaa.contextpath}</stringProp>
             <boolProp name="Cookie.secure">false</boolProp>
             <longProp name="Cookie.expires">0</longProp>
             <boolProp name="Cookie.path_specified">true</boolProp>
@@ -48,9 +74,9 @@
         <elementProp name="ThreadGroup.main_controller" elementType="com.blazemeter.jmeter.control.VirtualUserController"/>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <stringProp name="TargetLevel">12</stringProp>
-        <stringProp name="RampUp">240</stringProp>
+        <stringProp name="RampUp">360</stringProp>
         <stringProp name="Steps">12</stringProp>
-        <stringProp name="Hold">180</stringProp>
+        <stringProp name="Hold">120</stringProp>
         <stringProp name="LogFilename"></stringProp>
         <stringProp name="Iterations"></stringProp>
         <stringProp name="Unit">S</stringProp>
@@ -91,7 +117,7 @@
             <stringProp name="HTTPSampler.port"></stringProp>
             <stringProp name="HTTPSampler.protocol"></stringProp>
             <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">/uaa/login.do</stringProp>
+            <stringProp name="HTTPSampler.path">${net.uaa.contextpath}login.do</stringProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -142,7 +168,7 @@
             <stringProp name="HTTPSampler.port"></stringProp>
             <stringProp name="HTTPSampler.protocol"></stringProp>
             <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">/app/</stringProp>
+            <stringProp name="HTTPSampler.path">${net.app.contextpath}</stringProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
