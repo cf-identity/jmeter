@@ -1,7 +1,7 @@
 # jmeter
 repo for jmeter scripts to demonstrate jmeter capabilities. 
 
-##Complex Multistep Flow - Example Output
+## Complex Multistep Flow - Example Output
 
 ![Thread Count to Response Time](docs/images/response-time-vs-thread.png "Thread count to Response Time Ratio")
 
