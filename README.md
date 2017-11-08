@@ -1,9 +1,17 @@
 # jmeter
 repo for jmeter scripts to demonstrate jmeter capabilities. 
 
+The following test suites have been created as demonstration
+
+1. [UAA only - complex auth code flow](#complex-auth-flow-with-a-throttled-uaa-and-no-third-party-app) 
+1. Login, Authorize, Logout - authcode flow [simple-auth-code-test.jmx](uaa/simple-auth-code-test.jmx)
+1. [Login, Repeat Authorize with third party app](#complex-multistep-flow-with-third-party-app---example-output), Logout - complex authcode flow 
+1. [Client Credentials](#client-credentials-flow) [simple-client-credentials.jmx](uaa/simple-client-credentials.jmx)
+1. Password Grant [simple-password-grant.jmx](uaa/simple-password-grant.jmx)
+
 ## Complex Auth Flow with a throttled UAA and no third party app
 
-In this test run we introduce the concept of throttling traffic to better suite
+In this [test](uaa/single-app-login-then-auth-code-test.jmx) run we introduce the concept of throttling traffic to better suite
 the UAA's concurrency profile. We set maxThreads="30". We also remove the third party application
 so that we only test the UAA performance, not sharing resources with the application.
 
@@ -54,12 +62,16 @@ The load test just test the login/authorize actions.
 ### Login-Authorize-Logout
 #### launch jmeter
 
+Define [test](uaa/simple-auth-code-test.jmx)
+
     jmeter -t uaa/simple-auth-code-test.jmx
 
 Press the `Play` button or use the menu Run->Start to launch the test
 
 ### Login-Authorize-Repeat-Authorize
 #### launch jmeter
+
+Define [test](uaa/login-then-auth-code-test.jmx)
 
     jmeter -t uaa/login-then-auth-code-test.jmx
 
