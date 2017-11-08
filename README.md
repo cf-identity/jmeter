@@ -1,6 +1,13 @@
 # jmeter
 repo for jmeter scripts to demonstrate jmeter capabilities. 
 
+##Complex Multistep Flow - Example Output
+
+![Thread Count to Response Time](docs/images/response-time-vs-thread.png "Thread count to Response Time Ratio")
+
+![Thread Count to Throughput](docs/images/response-time-vs-thread.png "Thread count to Throughput Ratio")
+
+## Introduction
 We currently have four different kinds of tests added
 
 * client_credentials - simple client_credentials grant type
