@@ -35,6 +35,29 @@ Endpoints Exercised - in order
 ### System Snapshot
 ![System Snapshot](docs/images/system-nmon.png "System Snapshot")
 
+
+## Complex Auth Flow with a throttled UAA and no third party app
+
+In this test run we introduce the concept of throttling traffic to better suite
+the UAA's concurrency profile. We set maxThreads="30". We also remove the third party application
+so that we only test the UAA performance, not sharing resources with the application.
+
+### Thread Step Up
+![Thread Logic](docs/images/thread-step-setup.png "Thread Step Up Configuration")
+
+### Thread Count to Response Time
+![Thread Count to Response Time](docs/images/single-node-auth-code/response-time-vs-thread.png "Thread count to Response Time Ratio")
+
+### Thread Count to Throughput
+![Thread Count to Throughput](docs/images/single-node-auth-code/thread-vs-throughput.png "Thread count to Throughput Ratio")
+
+### Response Time over Time
+![Response Time over Time](docs/images/single-node-auth-code/response-time-over-time.png "Response Time over Time")
+
+### System Snapshot
+![System Snapshot](docs/images/single-node-auth-code/system-nmon.png "System Snapshot")
+
+
 ## Introduction
 We currently have four different kinds of tests added
 
