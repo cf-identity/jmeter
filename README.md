@@ -3,8 +3,13 @@ repo for jmeter scripts to demonstrate jmeter capabilities.
 
 ## Complex Multistep Flow - Example Output
 
+### Thread Step Up
+![Thread Logic](docs/images/thread-step-setup.png "Thread Step Up Configuration")
+
+### Thread Count to Response Time
 ![Thread Count to Response Time](docs/images/response-time-vs-thread.png "Thread count to Response Time Ratio")
 
+### Thread Count to Throughput
 ![Thread Count to Throughput](docs/images/response-time-vs-thread.png "Thread count to Throughput Ratio")
 
 ## Introduction
