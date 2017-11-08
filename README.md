@@ -10,7 +10,7 @@ repo for jmeter scripts to demonstrate jmeter capabilities.
 ![Thread Count to Response Time](docs/images/response-time-vs-thread.png "Thread count to Response Time Ratio")
 
 ### Thread Count to Throughput
-![Thread Count to Throughput](docs/images/response-time-vs-thread.png "Thread count to Throughput Ratio")
+![Thread Count to Throughput](docs/images/thread-vs-throughput.png "Thread count to Throughput Ratio")
 
 ### Response Time over Time
 ![Response Time over Time](docs/images/response-time-over-time.png "Response Time over Time")
