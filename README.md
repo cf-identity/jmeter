@@ -1,7 +1,7 @@
 # jmeter
 repo for jmeter scripts to demonstrate jmeter capabilities. 
 
-## Complex Multistep Flow - Example Output
+## Complex Multistep Flow With Third Party App - Example Output
 
 Test Logic - Each user
 1. Logs in to the UAA
