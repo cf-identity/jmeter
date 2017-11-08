@@ -3,6 +3,13 @@ repo for jmeter scripts to demonstrate jmeter capabilities.
 
 ## Complex Multistep Flow - Example Output
 
+Test Logic - Each user
+1. Logs in to the UAA
+1. Logs into third party app using authorization code flow
+1. Logs out of third party app
+1. Repeat step 2) and 3) 1000 times
+1. Logs out of UAA 
+
 ### Thread Step Up
 ![Thread Logic](docs/images/thread-step-setup.png "Thread Step Up Configuration")
 
@@ -14,6 +21,9 @@ repo for jmeter scripts to demonstrate jmeter capabilities.
 
 ### Response Time over Time
 ![Response Time over Time](docs/images/response-time-over-time.png "Response Time over Time")
+
+### System Snapshot
+![System Snapshot](docs/images/system-nmon.png "System Snapshot")
 
 ## Introduction
 We currently have four different kinds of tests added
