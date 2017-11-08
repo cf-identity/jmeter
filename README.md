@@ -10,6 +10,16 @@ Test Logic - Each user
 1. Repeat step 2) and 3) 1000 times
 1. Logs out of UAA 
 
+Endpoints Exercised - in order
+* /uaa/login.do
+* /app/
+* /uaa/oauth/authorize
+* /app/?code=<auth code>
+* /uaa/oauth/token
+* /uaa/userinfo
+* /app/logout
+* /uaa/logout.do
+
 ### Thread Step Up
 ![Thread Logic](docs/images/thread-step-setup.png "Thread Step Up Configuration")
 
