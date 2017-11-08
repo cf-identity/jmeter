@@ -95,3 +95,23 @@ and user `marissa` with password `koala`.
 ### launch jmeter
 
      jmeter -t uaa/simple-password-grant.jmx
+
+## Throttled UAA
+
+In this test run we introduce the concept of throttling traffic to better suite
+the UAA's concurrency profile. We set maxThreads="30"
+
+### Thread Step Up
+![Thread Logic](docs/images/thread-step-setup.png "Thread Step Up Configuration")
+
+### Thread Count to Response Time
+![Thread Count to Response Time](docs/images/throttled-to-30/response-time-vs-thread.png "Thread count to Response Time Ratio")
+
+### Thread Count to Throughput
+![Thread Count to Throughput](docs/images/throttled-to-30/thread-vs-throughput.png "Thread count to Throughput Ratio")
+
+### Response Time over Time
+![Response Time over Time](docs/images/throttled-to-30/response-time-over-time.png "Response Time over Time")
+
+### System Snapshot
+![System Snapshot](docs/images/throttled-to-30/system-nmon.png "System Snapshot")
