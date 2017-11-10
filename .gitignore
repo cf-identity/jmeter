@@ -4,6 +4,7 @@ apache-jmeter/backups/
 # Compiled class file
 *.class
 
+*.jtl
 # Log file
 *.log
 
