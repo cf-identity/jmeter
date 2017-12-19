@@ -48,11 +48,6 @@
             <stringProp name="Argument.value">${__P(uaa_token_path,/uaa/oauth/token)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
-          <elementProp name="admin_secret" elementType="Argument">
-            <stringProp name="Argument.name">admin_secret</stringProp>
-            <stringProp name="Argument.value">${__P(admin_secret,adminsecret)}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
           <elementProp name="gorouter_ip" elementType="Argument">
             <stringProp name="Argument.name">gorouter_ip</stringProp>
             <stringProp name="Argument.value">${__P(gorouter_ip,localhost)}</stringProp>
