@@ -145,6 +145,10 @@
             <stringProp name="Header.name">Accept-Encoding</stringProp>
             <stringProp name="Header.value">gzip, deflate, br</stringProp>
           </elementProp>
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Host</stringProp>
+            <stringProp name="Header.value">${uaa_domain}</stringProp>
+          </elementProp>
         </collectionProp>
       </HeaderManager>
       <hashTree/>
