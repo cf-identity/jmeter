@@ -1305,11 +1305,11 @@ cm.add(header);</stringProp>
           <boolProp name="include_checkbox_state">false</boolProp>
           <boolProp name="exclude_checkbox_state">false</boolProp>
           <collectionProp name="metricConnections">
-            <collectionProp name="-2085201108">
-              <stringProp name="1067878127">${uaa_vm_ip}</stringProp>
+            <collectionProp name="632530260">
+              <stringProp name="-1255518631">${uaa_vm_ip2}</stringProp>
               <stringProp name="1600768">4444</stringProp>
               <stringProp name="73589">JMX</stringProp>
-              <stringProp name="906203597">url=${uaa_vm_ip}\:${jmx_port}:label=GC time(ms):gc-time</stringProp>
+              <stringProp name="1452421183">url=${uaa_vm_ip2}\:${jmx_port}:label=GC time(ms):gc-time</stringProp>
             </collectionProp>
           </collectionProp>
         </kg.apc.jmeter.perfmon.PerfMonCollector>
