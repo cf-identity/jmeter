@@ -25,17 +25,17 @@
           </elementProp>
           <elementProp name="protocol" elementType="Argument">
             <stringProp name="Argument.name">protocol</stringProp>
-            <stringProp name="Argument.value">${__P(protocol,https)}</stringProp>
+            <stringProp name="Argument.value">${__P(protocol,http)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="uaa_token_path" elementType="Argument">
             <stringProp name="Argument.name">uaa_token_path</stringProp>
-            <stringProp name="Argument.value">${__P(uaa_token_path,/oauth/token)}</stringProp>
+            <stringProp name="Argument.value">${__P(uaa_token_path,/uaa/oauth/token)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="uaa_domain" elementType="Argument">
             <stringProp name="Argument.name">uaa_domain</stringProp>
-            <stringProp name="Argument.value">${__P(uaa_domain,uaa.uaa-stresstest.cf-app.com)}</stringProp>
+            <stringProp name="Argument.value">${__P(uaa_domain,localhost:8080/uaa)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="cpu_monitor_path" elementType="Argument">
@@ -55,7 +55,7 @@
           </elementProp>
           <elementProp name="rpm_per_thread" elementType="Argument">
             <stringProp name="Argument.name">rpm_per_thread</stringProp>
-            <stringProp name="Argument.value">${__P(rpm_per_thread,120)}</stringProp>
+            <stringProp name="Argument.value">${__P(rpm_per_thread,60)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="target_concurrency" elementType="Argument">
@@ -80,32 +80,37 @@
           </elementProp>
           <elementProp name="password" elementType="Argument">
             <stringProp name="Argument.name">password</stringProp>
-            <stringProp name="Argument.value">${__P(password,6t1s9dymwgav0mk06vky)}</stringProp>
+            <stringProp name="Argument.value">${__P(password,adminsecret)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="client_id" elementType="Argument">
             <stringProp name="Argument.name">client_id</stringProp>
-            <stringProp name="Argument.value">${__P(client_id,ssh-proxy)}</stringProp>
+            <stringProp name="Argument.value">${__P(client_id,app)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="client_secret" elementType="Argument">
             <stringProp name="Argument.name">client_secret</stringProp>
-            <stringProp name="Argument.value">${__P(client_secret,ijfqobp96cqygdavqkqi)}</stringProp>
+            <stringProp name="Argument.value">${__P(client_secret,appclientsecret)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="uaa_authorize_path" elementType="Argument">
             <stringProp name="Argument.name">uaa_authorize_path</stringProp>
-            <stringProp name="Argument.value">${__P(uaa_authorize_path,/oauth/authorize)}</stringProp>
+            <stringProp name="Argument.value">${__P(uaa_authorize_path,/uaa/oauth/authorize)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="uaa_login_path" elementType="Argument">
             <stringProp name="Argument.name">uaa_login_path</stringProp>
-            <stringProp name="Argument.value">${__P(uaa_login_path,/login.do)}</stringProp>
+            <stringProp name="Argument.value">${__P(uaa_login_path,/uaa/login.do)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="redirect_uri" elementType="Argument">
             <stringProp name="Argument.name">redirect_uri</stringProp>
-            <stringProp name="Argument.value">${__P(redirect_uri,https://uaa.uaa-stresstest.cf-app.com/login)}</stringProp>
+            <stringProp name="Argument.value">${__P(redirect_uri,http://localhost:8080/login)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="uaa_vm_ip2" elementType="Argument">
+            <stringProp name="Argument.name">uaa_vm_ip2</stringProp>
+            <stringProp name="Argument.value">${__P(uaa_vm_ip2,localhost)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
@@ -1196,8 +1201,8 @@ cm.add(header);</stringProp>
           <boolProp name="include_checkbox_state">false</boolProp>
           <boolProp name="exclude_checkbox_state">false</boolProp>
           <collectionProp name="metricConnections">
-            <collectionProp name="1869499558">
-              <stringProp name="1067878127">${uaa_vm_ip}</stringProp>
+            <collectionProp name="-1163728881">
+              <stringProp name="-1255518631">${uaa_vm_ip2}</stringProp>
               <stringProp name="1600768">4444</stringProp>
               <stringProp name="66952">CPU</stringProp>
               <stringProp name="-612455675">combined</stringProp>
@@ -1248,11 +1253,11 @@ cm.add(header);</stringProp>
           <boolProp name="include_checkbox_state">false</boolProp>
           <boolProp name="exclude_checkbox_state">false</boolProp>
           <collectionProp name="metricConnections">
-            <collectionProp name="1790861186">
-              <stringProp name="1067878127">${uaa_vm_ip}</stringProp>
+            <collectionProp name="433260834">
+              <stringProp name="-1255518631">${uaa_vm_ip2}</stringProp>
               <stringProp name="1600768">4444</stringProp>
               <stringProp name="73589">JMX</stringProp>
-              <stringProp name="1078778777">url=${uaa_vm_ip}\:${jmx_port}:unit=kb:memory-usage</stringProp>
+              <stringProp name="434994663">url=${uaa_vm_ip2}\:${jmx_port}:unit=kb:memory-usage</stringProp>
             </collectionProp>
           </collectionProp>
         </kg.apc.jmeter.perfmon.PerfMonCollector>
