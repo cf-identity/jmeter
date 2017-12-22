@@ -245,7 +245,7 @@
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <stringProp name="TargetLevel">${target_concurrency}</stringProp>
         <stringProp name="RampUp">${ramp_up_time}</stringProp>
-        <stringProp name="Steps">total_steps</stringProp>
+        <stringProp name="Steps">${total_steps}</stringProp>
         <stringProp name="Hold">20</stringProp>
         <stringProp name="LogFilename"></stringProp>
         <stringProp name="Iterations">10000</stringProp>
