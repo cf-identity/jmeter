@@ -489,12 +489,7 @@ cm.removeHeaderNamed(&quot;Cookie&quot;);</stringProp>
 import org.apache.jmeter.protocol.http.control.Header;
 
 String vcapid = vars.get(&quot;vcapid&quot;);
-log.info(vcapid);
-log.info(&quot;token1 got vcap ID ^^^^^^^^^^^^^^^&quot;);
-
 String jsessionid = vars.get(&quot;jsessionid&quot;);
-log.info(jsessionid);
-log.info(&quot;session1 got jsession ID ^^^^^^^^^^^^^^^&quot;);
 
 HeaderManager cm = sampler.getHeaderManager();
 Header header = new Header(&quot;Cookie&quot;, &quot;X-Uaa-Csrf=jmeter;&quot;);
@@ -1029,12 +1024,7 @@ cm.removeHeaderNamed(&quot;Cookie&quot;);</stringProp>
 import org.apache.jmeter.protocol.http.control.Header;
 
 String vcapid = vars.get(&quot;vcapid&quot;);
-log.info(vcapid);
-log.info(&quot;token2 got vcap ID ^^^^^^^^^^^^^^^&quot;);
-
 String jsessionid = vars.get(&quot;jsessionid&quot;);
-log.info(jsessionid);
-log.info(&quot;session2 got jsession ID ^^^^^^^^^^^^^^^&quot;);
 
 HeaderManager cm = sampler.getHeaderManager();
 Header header = new Header(&quot;Cookie&quot;, &quot;X-Uaa-Csrf=jmeter;&quot;);
