@@ -268,7 +268,6 @@ if(pairs.get(vcap) == null) {
 		for(Map.Entry kv : pairs.entrySet()) {
 			props.setProperty(&quot;vcapid&quot;+i, kv.getKey());
 			props.setProperty(&quot;jsessionid&quot;+i, kv.getValue());
-			log.info(&quot;login thread Key &quot; + kv.getKey() + &quot; value &quot; + kv.getValue());
 			i++;
 		}
 	}
@@ -479,12 +478,7 @@ cm.removeHeaderNamed(&quot;Cookie&quot;);</stringProp>
 import org.apache.jmeter.protocol.http.control.Header;
 
 String vcapid = vars.get(&quot;vcapid&quot;);
-log.info(vcapid);
-log.info(&quot;token1 got vcap ID ^^^^^^^^^^^^^^^&quot;);
-
 String jsessionid = vars.get(&quot;jsessionid&quot;);
-log.info(jsessionid);
-log.info(&quot;session1 got jsession ID ^^^^^^^^^^^^^^^&quot;);
 
 HeaderManager cm = sampler.getHeaderManager();
 Header header = new Header(&quot;Cookie&quot;, &quot;X-Uaa-Csrf=jmeter;&quot;);
@@ -1019,12 +1013,7 @@ cm.removeHeaderNamed(&quot;Cookie&quot;);</stringProp>
 import org.apache.jmeter.protocol.http.control.Header;
 
 String vcapid = vars.get(&quot;vcapid&quot;);
-log.info(vcapid);
-log.info(&quot;token2 got vcap ID ^^^^^^^^^^^^^^^&quot;);
-
 String jsessionid = vars.get(&quot;jsessionid&quot;);
-log.info(jsessionid);
-log.info(&quot;session2 got jsession ID ^^^^^^^^^^^^^^^&quot;);
 
 HeaderManager cm = sampler.getHeaderManager();
 Header header = new Header(&quot;Cookie&quot;, &quot;X-Uaa-Csrf=jmeter;&quot;);
@@ -1349,7 +1338,7 @@ cm.removeHeaderNamed(&quot;Cookie&quot;);</stringProp>
           <boolProp name="include_checkbox_state">false</boolProp>
           <boolProp name="exclude_checkbox_state">false</boolProp>
           <collectionProp name="metricConnections">
-            <collectionProp name="632530260">
+            <collectionProp name="-721928557">
               <stringProp name="-1255518631">${uaa_vm_ip2}</stringProp>
               <stringProp name="1600768">4444</stringProp>
               <stringProp name="73589">JMX</stringProp>
